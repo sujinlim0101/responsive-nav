@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f2f2f2;
+}
+nav {
+  background-color: #3f51b5;
+  background-image: -webkit-linear-gradient(left, #3f51b5, #03a9f4);
+  height: 60px;
+  margin: auto;
+  position: relative;
+}
+
+#bc1,
+.btn {
+  display: none;
+}
+label.logo {
+  color: #fff;
+  float: left;
+  font-size: 40px;
+  padding: 0 5%;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+ul {
+  float: left;
+}
+ul li {
+  display: inline-block;
+  list-style: none;
+}
+
+ul li a {
+  color: #fff;
+  line-height: 60px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0 15px;
+}
+ul li a:hover {
+  background-color: #05acfa3d;
+}
+#bc2 {
+  display: none;
+}
+.search-icon i {
+  position: absolute;
+  float: left;
+  right: 5%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.search-icon i:hover {
+  background-color: #4258d680;
+}
+.search-box {
+  position: absolute;
+  float: left;
+  background-color: #1e232b;
+  right: 5%;
+  top: -60px;
+  width: 400px;
+  height: 58px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+.search-box::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #1e232b;
+  margin: -19px 0 0;
+}
+form {
+  width: 100%;
+  height: 38px;
+  right: 0;
+  background-color: #9b9b9b08;
+  display: flex;
+  overflow: hidden;
+  padding: 2px;
+  border: 1px solid #9b9b9b33;
+  border-radius: 4px;
+}
+.search {
+  width: 95%;
+  background-color: #000000;
+  color: #fff;
+  padding: 0 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+  outline: none;
+}
+.sub {
+  font-size: 14px;
+  padding: 0 13px;
+  border: 0;
+  background-color: #3653f7;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.sub:hover {
+  background-color: #3653f780;
+}
+#bc2:checked ~ .search-box {
+  top: 60px;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    width: 100%;
+  }
+  ul {
+    position: fixed;
+    width: 300px;
+    background-color: #12161d;
+    height: 100vh;
+    text-align: center;
+    top: -800px;
+  }
+  ul li {
+    display: block;
+    padding: 5px 0;
+  }
+  ul li:hover {
+    background-color: none;
+  }
+  ul li a:hover {
+    color: #3653f7;
+  }
+  label.logo {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+  }
+  .btn {
+    position: absolute;
+    display: block;
+    height: 60px;
+    width: 60px;
+    left: 5%;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 20;
+  }
+  #bc1:checked ~ ul {
+    top: 60px;
+  }
+}
+@media (max-width: 652px) {
+  ul {
+    width: 100%;
+  }
+}
